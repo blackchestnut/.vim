@@ -10,6 +10,7 @@ git_bundles = %w[
   briancollins/vim-jst
   cakebaker/scss-syntax.vim
   elzr/vim-json
+  fatih/vim-go
   jeetsukumaran/vim-buffergator
   kchmck/vim-coffee-script
   majutsushi/tagbar
