@@ -33,6 +33,7 @@ let g:syntastic_coffee_checkers=['coffee'] ", 'coffeelint'
 let g:syntastic_slim_checkers=['slimrb']
 let g:syntastic_json_checkers=['jsonlint'] " npm install -g jsonlint
 let g:vim_json_syntax_conceal = 0
+let g:syntastic_sass_checkers=[]
 "let g:syntastic_enable_signs=1
 "let g:syntastic_auto_loc_list=1
 "-----------------------------------------------------------------------------
