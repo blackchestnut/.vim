@@ -501,6 +501,7 @@ au BufNewFile,BufRead *.rb set makeprg=ruby\ -c\ %
 "au BufNewFile,BufRead *.cpp,*.h set tags+=~/.vimdata/c++/unix/std/tags
 
 au BufNewFile,BufRead *.ass,*.ssa set filetype=ssa
+au FileType go set nolist
 "-----------------------------------------------------------------------------
 " omni completion
 "-----------------------------------------------------------------------------
