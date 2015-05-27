@@ -142,18 +142,33 @@ set noswapfile
 syntax on
 set t_Co=256
 colors ir_black
-"colors sebocean
-if has("mac")
-  "set guifont=Source\ Code\ Pro:h14
-  "set guifont=Monaco:h14
-  " download Monaco for Powerline.otf from https://gist.github.com/baopham/1838072
-  set guifont=Monaco\ for\ Powerline:h14
-elseif has("gui_gtk2")
-  set guifont=Monaco\ 12
-else
-  set guifont=Monaco:h10
-endif
-" strings numeration
+
+"-------------------------------------------------------------------------------
+" Fonts
+"-------------------------------------------------------------------------------
+
+"-----------------------------------------------------------------------------------------------100-------------------------------------140-----------------160
+" For text
+" 1234567890
+" !@#$%^&**()_+=;.:|/?<>
+" qwertyuiopasdfghjklzxcvbnm
+" QWERTYUIOPASDFGHJKLZXCVBNM
+
+set guifont=Monaco\ for\ Powerline:h14
+set linespace=0
+
+"set linespace=-2
+"set guifont=Inconsolata\ LGC:h14
+
+"set linespace=3
+"set guifont=Inconsolata:h14
+
+"set linespace=2
+"set guifont=Input\ Mono\ Narrow:h13
+
+"set linespace=1
+"set guifont=Andale\ Mono\ MT\ Std:h13
+
 set number " always show line numbers
 set guioptions-=T
 set ch=1
