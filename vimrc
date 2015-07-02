@@ -408,9 +408,18 @@ nnoremap <silent><leader>"  :<C-U>call <SID>ToggleDoubleQuote()<CR>
 map <c-\> :tab split<cr>:exec("tag ".expand("<cword>"))<cr>
 " NERDCommenter
 map ,<space> <plug>NERDCommenterToggle
-"-----------------------------------------------------------------------------
+
+"-------------------------------------------------------------------------------
+" generation of complementary brackets
+"-------------------------------------------------------------------------------
+
+inoremap {{ {<Space><Space>}<Esc>hi
+inoremap (( ()<Esc>i
+
+"-------------------------------------------------------------------------------
 " menu
-"-----------------------------------------------------------------------------
+"-------------------------------------------------------------------------------
+
 if !has("unix")
   anoremenu &File.&Font.&Monaco_10 :set guifont=Monaco:h10<cr>
   anoremenu &File.&Font.&Consolas_10 :set guifont=Consolas:h12:cRUSSIAN<cr>
