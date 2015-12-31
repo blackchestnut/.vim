@@ -5,7 +5,7 @@ let g:vimrubocop_config = '~/.vim/configs/rubocop/default.yml'
 "-----------------------------------------------------------------------------
 let g:buffergator_suppress_keymaps = 1
 nnoremap <silent> <Leader>b :BuffergatorOpen<CR>
-nnoremap <silent> <Leader>B :BuffergatorClose<CR>
+"nnoremap <silent> <Leader>B :BuffergatorClose<CR>
 "nnoremap <silent> <Leader>t :BuffergatorTabsOpen<CR>
 "nnoremap <silent> <Leader>T :BuffergatorTabsClose<CR>
 "-----------------------------------------------------------------------------
@@ -103,7 +103,7 @@ set directory=$HOME
 " russian language fix
 set langmap=ё`,йq,цw,уe,кr,еt,нy,гu,шi,щo,зp,фa,ыs,вd,аf,пg,рh,оj,лk,дl,э',яz,чx,сc,мv,иb,тn,ьm,б\\,,ю.,Ё~,ЙQ,ЦW,УE,КR,ЕT,НY,ГU,ШI,ЩO,ЗP,ФA,ЫS,ВD,АF,ПG,РH,ОJ,ЛK,ДL,Ж:,Э\\",ЯZ,ЧX,СC,МV,ИB,ТN,ЬM,Б<,Ю>
 " one word symbol class
-set iskeyword=@,48-57,_,192-255,\$,\-
+set iskeyword=@,48-57,_,192-255,\$,\-,\?
 " encodings
 set fileencodings=utf-8,windows-1251,iso-8859-15,koi8-r
 " fileformat
@@ -141,7 +141,7 @@ set noswapfile
 " gui
 syntax on
 set t_Co=256
-colors ir_black
+colors ir_black_blackchestnut
 
 "-------------------------------------------------------------------------------
 " Fonts
@@ -170,6 +170,7 @@ set linespace=0
 "set guifont=Andale\ Mono\ MT\ Std:h13
 
 set number " always show line numbers
+set colorcolumn=84
 set guioptions-=T
 set ch=1
 set noguipty
@@ -222,7 +223,6 @@ set complete+=t
 
 set wildmenu
 set wcm=<Tab>
-"dont fold by default
 
 "dont fold by default
 set nofoldenable
@@ -300,7 +300,7 @@ vmap l <right>
 imap <c-l> <right>
 cmap <c-l> <right>
 " ESC button
-imap jj <Esc><right>
+imap jj <Esc>
 " arrows
 nmap <down> gj
 nmap <up> gk
@@ -416,7 +416,6 @@ map ,<space> <plug>NERDCommenterToggle
 inoremap {{ {<Space><Space>}<Esc>hi
 inoremap (( ()<Esc>i
 
-"-------------------------------------------------------------------------------
 " menu
 "-------------------------------------------------------------------------------
 
@@ -525,6 +524,10 @@ au BufNewFile,BufRead *.rb set makeprg=ruby\ -c\ %
 "au BufNewFile,BufRead *.cpp,*.h set tags+=~/.vimdata/c++/unix/std/tags
 
 au BufNewFile,BufRead *.ass,*.ssa set filetype=ssa
+
+" syntax highlight fix for brackets
+au BufNewFile,BufRead * syn match rubyParens "[()\[\]]"
+
 au FileType go set nolist
 "-----------------------------------------------------------------------------
 " omni completion
